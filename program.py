@@ -1,3 +1,10 @@
+try:
+ filename = 'file1.txt'
+ file = open(filename, "x")
+ print(filename + " successfully created.")
+except:
+ print(filename + " already exists.")
+
 print("A - Add Record")
 print("B - View Records")
 print("C - Clear All Records")
@@ -30,6 +37,7 @@ def viewRec():
  with open(filename, 'r') as read_file:
     print(read_file.read())
  read_file.close()
+ 
 def clearRec():
  file = open(filename, 'w')
  file.write("")
